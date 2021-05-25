@@ -1,0 +1,13 @@
+<body>
+<h2>星星班：</h2>
+<ul class="users">
+  <li *ngFor="let user of users,index as i" >
+    <a routerLink="/detail/{{user.id}}" style="color: black">
+    <span class="badge">{{user.id}}</span> <span>{{user.name}}</span>
+    </a>
+    <button style="margin-left: 50px" (click)="deleteUser(i)" >删除</button>
+  </li>
+</ul>
+<button style="margin-left: 20px" (click)="addUser()" nzType="primary" >增加学员</button>
+<button style="margin-left: 33px"><a routerLink="/" style="color: black">返回</a></button>
+</body>

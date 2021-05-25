@@ -1,0 +1,12 @@
+<div *ngIf="user">
+  <h2>自我介绍：</h2>
+  <h3>大家好 我是{{user.name}} 今年{{user.age}}岁了
+    现在是春田花花幼儿园星星班的成员</h3>
+    <div>
+      <label>
+        name:<input [(ngModel)]="user.name" placeholder="name"/>
+        age:<input [(ngModel)]="user.age" placeholder="age"/>
+      </label>
+    </div>
+</div><br>
+<button routerLink="/star">回到班级</button>
